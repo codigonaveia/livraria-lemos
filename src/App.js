@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import NavHorizontal from "./components/Navegacao/NavHorizontal";
+import Footer from "./components/Footer/Footer";
+import { Container } from "react-bootstrap";
+import TabelaLivros from "./components/Livros/TabelaLivros";
+import livros from "./components/Livros/livros.json";
+import { useEffect, useState } from "react";
+const App = () => {
+  //  const dados =[
+  //   {
+  //     id:1,titulo:"React",autor:"Edinaldo",preco:100
+  //   },
+  //   {
+  //     id:2,titulo:".NET CORE 7",autor:"Edinaldo",preco:300
+  //   },
 
-function App() {
+  //  ];
+
+  const [dados, setDados] = useState([]);
+
+  // useEffect(() => {
+  //   const carregaDadosLivros = async () => {
+  //     try {
+  //       const response = await fetch('./livros.json');
+  //       const dadosjson = await response.json();
+  //       setDados(dadosjson);
+  //     } catch (erro) {
+  //       console.erros("Error ao carregar os dados", erro);
+  //     }
+  //   };
+
+  //   carregaDadosLivros();
+  // }, []); // array vazio faz com que o useEffect rode apenas uma vez
+  useEffect(()=>{
+  setDados(livros);
+
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavHorizontal />
+      <Container>
+        <TabelaLivros dados={dados} />
+      </Container>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;

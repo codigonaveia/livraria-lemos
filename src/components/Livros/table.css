@@ -1,0 +1,11 @@
+.table-container{
+    margin-top: 50px;
+}
+.setasAscDesc{
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.setasAscDesc > div{cursor: pointer;}
