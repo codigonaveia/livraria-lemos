@@ -22,7 +22,7 @@ function NavHorizontal(){
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Livros</Nav.Link>
-            <NavDropdown title="Por generos" id="navbarScrollingDropdown">
+            <NavDropdown title="Generos" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Ação</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Comedia

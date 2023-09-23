@@ -1,5 +1,5 @@
 .table-container{
-    margin-top: 50px;
+    margin-top: 2%;
 }
 .setasAscDesc{
     display: inline-block;
@@ -9,3 +9,7 @@
     vertical-align: middle;
 }
 .setasAscDesc > div{cursor: pointer;}
+
+.form-cadastroLivro{
+    margin-top:2%;
+}

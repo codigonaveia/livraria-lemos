@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import TabelaLivros from "./components/Livros/TabelaLivros";
 import livros from "./components/Livros/livros.json";
 import { useEffect, useState } from "react";
+import CadastroLivros from "./components/Livros/CadastroLivros";
 const App = () => {
   //  const dados =[
   //   {
@@ -38,7 +39,8 @@ const App = () => {
     <>
       <NavHorizontal />
       <Container>
-        <TabelaLivros dados={dados} />
+        <CadastroLivros/>
+       <TabelaLivros dados={dados} />
       </Container>
       <Footer />
     </>
